@@ -1,91 +1,82 @@
-// Fundamentals of javaScript:
-// arrays and objects
-// function return
-// async js coding
+// Node.js Basic:
+// Introduction to Node.js.
+// Installing Node.js and npm.
+// node & npm ->
+// Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+// npm is the package manager for Node.js.
+// npm init
+// By the use of npm init we create a package.json file
 
-// Array[foreach, map, filter, find , indexOf]
+// Working with modules
+// understanding HTTP module
+// File system operations
 
-// var arr = [1,2,3,4,"hey",{},true,function(){},[]]
+// How to use module
 
-// var arr = [1,2,3,4];
-// // foreach map filter find indexof
-// arr.forEach(function(val){
+//const fs = require('node:fs/promises');
+const fs = require('fs');
 
-//    console.log(val + " Hello");
+// Writefile
+// appendfile
+// copyfile
+// rename 
+// unlink
+
+// fs.writeFile("hey.txt","Hey! Hello kese ho", function(err){
+//     if(err) console(err);
+//     else console.log("done"); // command for run cd 02_NodeBasic after that node script.js
     
 // })
 
-// let arr = [1,2,3,4,5];
 
-// let newarr = arr.map((val)=>{
-//    // return 13;
-//    return val * 2;
-// })
-
-// console.log(newarr);
-
-// let arr = [1,2,3,4];
-
-// let newarr = arr.filter((val)=>{
-//     if(val > 2) {return true;}
-//     else {return false;}
-// })
-
-// console.log(newarr);
-
-// let arr = [1,2,3,4,5];
-
-// let ans = arr.find((val)=>{
-//     if(val === 3) {return val;}
-// })
-// console.log(ans);
-
-// indexOf
-
-// let arr = [12,3,3,4,5];
-
-// let ans = arr.indexOf(3);
-// console.log(ans);
-
-// Objects
-
-// let obj = {
-//     name: "Nirmal",
-//     age: 20,
-// }
-
-
-// Object.freeze(obj)// We can change the value of objects
-// // obj.name
-// // obj['name']
-// obj.age = 25;
-
-// find the length of function
-
-//  function abcd(a,c,v,d){
+// fs.appendFile("hey.txt"," I am fine", function(err){
+//     if(err) console(err);
+//     else console.log("done"); // command for run cd 02_NodeBasic after that node script.js
     
-// }
-// the length is 4
+// })
 
-// function val(){
-//     return 100;
-// }
 
-// let ans = val();
-
-// async 
-
-// when code run line by line then called the synchronous
-// jo bhi code async nature ka ho , usey side stack me bejh do and agle code ko run karo jo bhi sync nature ka ho , jb bhi sar sync code run ho jye , tab check karo async code complete hua ya nhi and bo complete hua ho toh usee me lao aour run akro
-
-async function abcd(){
-    const blob =  await fetch("https://randomuser.me/api/")
-    const ans = await blob.json();
-   
-    console.log(ans.results[0].name);
+// fs.rename("hey.txt","hello.txt", function(err){
+//     if(err) console(err);
+//     else console.log("done"); // command for run cd 02_NodeBasic after that node script.js
     
-   }
-   
-   abcd();
-   
-   
+// })
+
+
+// fs.copyFile("hello.txt","./copy/copy.txt", function(err){
+//     if(err) console(err);
+//     else console.log("done"); // command for run cd 02_NodeBasic after that node script.js
+    
+// })
+
+// in this code we find a error
+
+// fs.copyFile("hello.txt","./copy2/copy.txt", function(err){
+//     if(err) console(err.message);
+//     else console.log("done"); // command for run cd 02_NodeBasic after that node script.js
+    
+// })
+
+// use of unLink
+
+// fs.unlink("hello.txt",function(err){
+//     if(err) console(err);
+//     else console.log("removed"); 
+// })
+
+// fs.rmdir("./copy",{recursive: true}, function(err){
+//     if(err) console(err);
+//     else console.log("removed");
+// })
+
+// In place of rmdir we can use the rm only
+
+// fs.rm("./copy",{recursive: true}, function(err){
+//     if(err) console(err);
+//     else console.log("removed");
+// })
+
+// UnderStanding of HTTP module
+
+
+
